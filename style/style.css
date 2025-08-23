@@ -1,0 +1,44 @@
+
+
+
+/* Força cor e peso no texto */
+.navbar-brand {
+  font-weight: 700;       /* deixa mais forte */
+  color: #222 !important; /* cor escura consistente */
+  font-size: 1.5rem;      /* levemente maior */
+}
+
+/* Aumenta altura sem quebrar */
+.navbar {
+  padding-top: 1rem;   /* mais espaço acima */
+  padding-bottom: 1rem; /* mais espaço abaixo */
+}
+
+
+.hero-modern{
+background: radial-gradient(1200px 600px at 80% 10%, rgba(255,255,255,0.12), transparent 50%),
+linear-gradient(135deg, #0d6efd 0%, #6f42c1 60%, #9333ea 100%);
+}
+.text-highlight{ position: relative; }
+.text-highlight::after{
+content: ""; position:absolute; left:0; bottom:0.15em; height:0.35em; width:100%;
+background: linear-gradient(90deg, rgba(255,209,102,.9), rgba(6,214,160,.9));
+z-index:-1; border-radius:.25rem;
+}
+.hero-illustration{ max-width: 520px; filter: drop-shadow(0 10px 30px rgba(0,0,0,.25)); }
+
+
+/* partículas decorativas e sutis */
+.particles span{
+position:absolute; width:8px; height:8px; border-radius:50%;
+left: var(--x); top: var(--y); background: rgba(255,255,255,.6);
+animation: float 6s ease-in-out infinite;
+}
+.particles span:nth-child(odd){ width:6px; height:6px; opacity:.7; }
+@keyframes float{ 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-10px);} }
+
+
+/* responsividade */
+@media (max-width: 991px){
+.hero-modern{ padding:2rem !important; }
+}
